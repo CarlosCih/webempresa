@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Categoría: {{ category.name }}{% endblock %}
+{% block content %}
+<section class="page-section cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-9 mx-auto">
+				<div class="cta-innerv text-center rounded">
+					<h2 class="section-heading mb-0">
+						<span class="section-heading-lower">Categoría: {{ category.name }}</span>
+					</h2>
+                    <div class="mt-4">
+                        <a href="{% url 'blog' %}" class="btn btn-primary mb-4">Regresar</a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

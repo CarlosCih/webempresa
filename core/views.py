@@ -23,23 +23,6 @@ class HomePageView(TemplateView):
         context.update(get_context_global(self.request))
         return context  
 
-class ServicesPageView(TemplateView):
-    template_name = 'core/services.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['current_section'] = 'services'
-        context.update(get_context_global(self.request))
-        return context
-
-class BlogPageView(TemplateView):
-    template_name = 'core/blog.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['current_section'] = 'blog'
-        context.update(get_context_global(self.request))
-        return context
 
 class ContactPageView(TemplateView):
     template_name = 'core/contact.html'
