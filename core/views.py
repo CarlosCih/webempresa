@@ -13,15 +13,6 @@ class HomePageView(TemplateView):
         return context  
 
 
-class ContactPageView(TemplateView):
-    template_name = 'core/contact.html'
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['current_section'] = 'contact'
-        context.update(get_context_global(self.request))    
-        return context
-
 class AboutPageView(TemplateView):
     template_name = 'core/about.html'
     

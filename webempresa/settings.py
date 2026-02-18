@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'social',
     'pages',
     'ckeditor',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+CONTACT_EMAIL = env('CONTACT_EMAIL', default=EMAIL_HOST_USER)
