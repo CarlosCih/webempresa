@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from core.views import get_context_global
 from .models import *
+from core.navbar_ctx import get_context_global  
 
 # Create your views here.
 class ServicesPageView(TemplateView):
