@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-ckeditor = "*"
 pillow = "*"
 pylint = "*"
 pylint-django = "*"
 pylint-celery = "*"
 django-environ = "*"
+django-ckeditor = "*"
 
 [dev-packages]
 
@@ -19,4 +19,3 @@ python_version = "3.14"
 python_full_version = "3.14.0"
 
 [scripts]
-
