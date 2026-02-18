@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'blog',
     'social',
     'pages',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,26 @@ MEDIA_ROOT = BASE_DIR / "media/"
 
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = 'dashboard/'
+
+#CKeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        'height': 300,
+        'width': '100%',
+    },
+}
+#configuracion para correos electronicos
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
