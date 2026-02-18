@@ -40,12 +40,3 @@ class StorePageView(TemplateView):
         context.update(get_context_global(self.request))
         return context
 
-class SamplesPageView(TemplateView):
-    template_name = 'core/sample.html'
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['current_section'] = 'samples'
-        context.update(get_context_global(self.request))
-        return context
-

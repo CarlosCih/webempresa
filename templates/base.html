@@ -61,17 +61,15 @@
           {% endfor %}
 	    </p>
         <p class="m-0 mbt">
-        	<a href="{% url 'samples' %}" class="link">Política de privacidad</a> ·
-        	<a href="{% url 'samples' %}" class="link">Aviso legal</a> ·
-        	<a href="{% url 'samples' %}" class="link">Cookies</a>
+        	<a href="{% url 'page' page_id=1 %}" class="link">Aviso legal</a> ·
+        	<a href="{% url 'page' page_id=2 %}" class="link">Cookies</a> ·
+        	<a href="{% url 'page' page_id=3 %}" class="link">Política de privacidad</a>
 		</p>
         <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
       </div>
 	</footer>
-
     <!-- Bootstrap -->
     <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    
 </body>
 </html>
